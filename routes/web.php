@@ -52,6 +52,8 @@ Route::view('/konversi-tahap4', 'konversi_koperasi_tahap4')->name('konversi_taha
 
 Route::view('/adminkoperasi-detail', 'admin_provinsi_detailadminkoperasi')->name('detail_adminkoperasi');
 
+Route::view('/pengawasan-dps-kabkota', 'admin_kabkota_pengawasandps')->name('pengawasandps_kabkota');
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -65,6 +67,29 @@ Route::get('/ya', function () {
     return view('admin_provinsi_dashboard');
 });
 
-Route::get('/coba', function () {
-    return view('admin_kabkota_dashboard');
-});
+
+Route::view('/admin_kabkota_dashboard', 'admin_kabkota_dashboard')->name('dashboard_kabkota');
+
+Route::view('/admin_kabkota_pengawasan-dps', 'admin_kabkota_detail_pengawasan_dps')->name('detail_pengawasan_dps_kabkota');
+
+Route::view('/detail-kabkotapengawasankoperasi', 'admin_kabkota_detail_pengawasandps_koperasi')->name('detailkoperasi_kabkota');
+
+Route::view('/detail-kabkota-dpsditerima', 'admin_kabkota_detail_pengawasan_dpsditerima')->name('dps_diterima_kabkota');
+
+Route::view('/detail-kabkota-dpsmenunggu', 'admin_kabkota_detail_pengawasan_dpsmenunggu')->name('dps_menunggu_kabkota');
+
+Route::view('/detail-kabkota-dpsditolak', 'admin_kabkota_detail_pengawasan_dpsditolak')->name('dps_ditolak_kabkota');
+
+Route::view('/admin-koperasi-kabkota', 'admin_kabkota_adminkoperasi')->name('adminkoperasi_kabkota');
+
+Route::view('/konversi-koperasi-kabkota', 'admin_kabkota_koversikoperasi')->name('konversikoperasi_kabkota');
+
+Route::view('/detail-admin-koperasi-kabkota', 'admin_kabkota_detailadminkoperasi')->name('detailadminkoperasi_kabkota');
+
+Route::view('/adminkabkota-konversi-tahap1', 'admin_kabkota_konversi_koperasi_tahap1')->name('kabkota_konversi_tahap1');
+
+Route::view('/adminkabkota-konversi-tahap2', 'admin_kabkota_konversi_koperasi_tahap2')->name('kabkota_konversi_tahap2');
+
+Route::view('/adminkabkota-konversi-tahap3', 'admin_kabkota_konversi_koperasi_tahap3')->name('kabkota_konversi_tahap3');
+
+Route::view('/adminkabkota-konversi-tahap4', 'admin_kabkota_konversi_koperasi_tahap4')->name('kabkota_konversi_tahap4');
