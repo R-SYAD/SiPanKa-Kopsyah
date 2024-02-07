@@ -21,7 +21,6 @@ Route::get('/admin/provinsi/manajemenkabkota', [AdminProvinsiManajemenKabKota::c
 Route::get('/admin/provinsi/manajemenkabkota', [AdminProvinsiManajemenKabKota::class, 'manajemenKabKota'])
     ->name('manajemenKabKota');
 
-
 Route::view('/admin-dps', 'admin_provinsi_admindps')->name('manajemenKabKota');
 
 Route::view('/admin-dps', 'admin_provinsi_admindps')->name('admindps');
@@ -93,3 +92,5 @@ Route::view('/adminkabkota-konversi-tahap2', 'admin_kabkota_konversi_koperasi_ta
 Route::view('/adminkabkota-konversi-tahap3', 'admin_kabkota_konversi_koperasi_tahap3')->name('kabkota_konversi_tahap3');
 
 Route::view('/adminkabkota-konversi-tahap4', 'admin_kabkota_konversi_koperasi_tahap4')->name('kabkota_konversi_tahap4');
+
+Route::view('/login', 'admin_login')->name('login');
