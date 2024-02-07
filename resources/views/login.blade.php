@@ -21,7 +21,7 @@
 
     <div class="square-box">
         <div class="box-text">
-            <p>Login Admin</p>
+            <p>Login </p>
             <p class="small-text">Silahkan login untuk mengakses aplikasi.</p>
         </div>
 
