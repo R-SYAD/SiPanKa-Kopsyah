@@ -35,3 +35,23 @@
   font-family: 'Poppins', sans-serif;
   top: -50px; 
 }
+
+.kembali {
+  width: auto;
+  height: auto;
+  background-color: #cacaca;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  align-items: center
+  
+}
+
+.kembali img{
+  margin-right: 8px;
+  width: auto; /* Sesuaikan dengan ukuran ikon */
+  height: auto;
+  align-self: center;
+}
