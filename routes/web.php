@@ -7,9 +7,6 @@ use App\Http\Controllers\AdminProvinsiController;
 use App\Http\Controllers\AdminProvinsiManajemenKabKota;
 use App\Http\Controllers\DpsController;
 
-
-
-
 Route::get('/admin_provinsi_dashboard', function () {
     return view('admin_provinsi_dashboard');
 
@@ -24,6 +21,7 @@ Route::get('/admin/provinsi/manajemenkabkota', [AdminProvinsiManajemenKabKota::c
 Route::get('/admin/provinsi/manajemenkabkota', [AdminProvinsiManajemenKabKota::class, 'manajemenKabKota'])
     ->name('manajemenKabKota');
 
+Route::view('/login', 'login')->name('login');
 
 Route::view('/admin-dps', 'admin_provinsi_admindps')->name('manajemenKabKota');
 
@@ -71,6 +69,34 @@ Route::get('/ya', function () {
 Route::get('/coba', function () {
     return view('admin_kabkota_dashboard');
 });
+
+Route::view('/admin_kabkota_dashboard', 'admin_kabkota_dashboard')->name('dashboard_kabkota');
+
+Route::view('/admin_kabkota_pengawasan-dps', 'admin_kabkota_detail_pengawasan_dps')->name('detail_pengawasan_dps_kabkota');
+
+Route::view('/detail-kabkotapengawasankoperasi', 'admin_kabkota_detail_pengawasandps_koperasi')->name('detailkoperasi_kabkota');
+
+Route::view('/detail-kabkota-dpsditerima', 'admin_kabkota_detail_pengawasan_dpsditerima')->name('dps_diterima_kabkota');
+
+Route::view('/detail-kabkota-dpsmenunggu', 'admin_kabkota_detail_pengawasan_dpsmenunggu')->name('dps_menunggu_kabkota');
+
+Route::view('/detail-kabkota-dpsditolak', 'admin_kabkota_detail_pengawasan_dpsditolak')->name('dps_ditolak_kabkota');
+
+Route::view('/admin-koperasi-kabkota', 'admin_kabkota_adminkoperasi')->name('adminkoperasi_kabkota');
+
+Route::view('/konversi-koperasi-kabkota', 'admin_kabkota_koversikoperasi')->name('konversikoperasi_kabkota');
+
+Route::view('/detail-admin-koperasi-kabkota', 'admin_kabkota_detailadminkoperasi')->name('detailadminkoperasi_kabkota');
+
+Route::view('/adminkabkota-konversi-tahap1', 'admin_kabkota_konversi_koperasi_tahap1')->name('kabkota_konversi_tahap1');
+
+Route::view('/adminkabkota-konversi-tahap2', 'admin_kabkota_konversi_koperasi_tahap2')->name('kabkota_konversi_tahap2');
+
+Route::view('/adminkabkota-konversi-tahap3', 'admin_kabkota_konversi_koperasi_tahap3')->name('kabkota_konversi_tahap3');
+
+Route::view('/adminkabkota-konversi-tahap4', 'admin_kabkota_konversi_koperasi_tahap4')->name('kabkota_konversi_tahap4');
+
+Route::view('/pengawasan-dps-kabkota', 'admin_kabkota_pengawasandps')->name('pengawasandps_kabkota');
 
 Route::get('/dps_lengkapi_profil', function () {
     return view('dps_lengkapi_profil');

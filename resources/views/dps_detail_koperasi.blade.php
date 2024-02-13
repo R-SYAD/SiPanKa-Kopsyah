@@ -17,9 +17,9 @@
     <div class="content">
         <div class="container mt-5">
             <div class="d-flex justify-content-between align-items-center">
-            <div class="dashboard-title">
-                <strong>Manajemen Koperasi / Informasi Koperasi</strong>
-            </div>
+                <div class="dashboard-title">
+                    <strong>Manajemen Koperasi / Informasi Koperasi</strong>
+                </div>
             </div>
         
             <!-- Dalam main-box -->

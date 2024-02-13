@@ -40,14 +40,16 @@ body {
 /* Gaya untuk Selamat Datang dan Admin */
 .center-textt p {
     font-size: 22px;
+    font-weight: medium;
     color: black;
     margin-left: 578px;
 }
 
 .center-textt .admin-text {
     font-size: 22px;
+    font-family: 'Poppins', sans-serif;
     color: #28A745;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 /* Gaya untuk tabel kolom Admin Kab Kota, DPS, dan Koperasi Syariah */

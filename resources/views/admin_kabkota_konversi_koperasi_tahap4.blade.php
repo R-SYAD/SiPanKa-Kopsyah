@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/konversi_tahap2.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/konversi_tahap4.css') }}">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
   <!-- Font Awesome -->
@@ -12,11 +12,10 @@
 </head>
 
 <body>
-  @include('layouts.admin_provinsi_sidebar')
-  @include('layouts.admin_provinsi_navbar')
-
+  @include('layouts.admin_kabkota_sidebar')
+  @include('layouts.admin_kabkota_navbar')
     <script src="{{asset('js/script.js')}}"></script>
-    <script src="{{asset('js/konversi_tahap2.js')}}"></script>
+    <script src="{{asset('js/adminkabkota_konversi_tahap4.js')}}"></script>
 
     <div class="content">
         <div class="container mt-5">
@@ -32,8 +31,8 @@
             </div>
           </div>
           <div class="card-body">
-            <h5 class="card-title">Tahap 2: </h5>
-            <p class="card-text text-center">Perubahan Akad Konversi Syariah </p>
+            <h5 class="card-title">Tahap 4: </h5>
+            <p class="card-text text-center">Pengesahan PAD </p>
           </div>
         </div>
     

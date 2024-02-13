@@ -14,12 +14,11 @@
 </head>
 
 <body>
-    @include('admin_kabkota.sidebar')
-    @include('admin_kabkota.navbar')
+    @include('layouts.admin_kabkota_sidebar')
+    @include('layouts.admin_kabkota_navbar')
 
     <!-- Bagian baru yang ditambahkan -->
     <div class="content">
-
         <div class="center-text">
             <h4 class="dashboard-title">Dashboard Admin</h4>
         </div>
@@ -51,11 +50,11 @@
                 <tbody>
                     <tr>
                         <td class="text-center center-card centered-content">
-                            <div class="card bg-success text-white mb-4">
+                            <div class="card bg-success text-white mb-4" data-route-name="{{ route('adminkoperasi_kabkota') }}">
                                 <div class="number">0</div>
                                 <div class="text">Koperasi Syariah</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link">Lihat Detail</a>
+                                    <a href="#" class="small text-white stretched-link">Lihat Detail</a>
                                 </div>
                             </div>
                         </td>                        
@@ -67,6 +66,7 @@
         <script src="{{asset('js/script_kabkota.js')}}"></script>
         <script src="{{asset('js/dashboard_kabkota.js')}}"></script>
     </div>
+</div>
 </body>
 
 </html>

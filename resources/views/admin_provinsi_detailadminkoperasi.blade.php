@@ -15,71 +15,84 @@
   <script src="{{ asset('js/script.js') }}"></script>
 
   <div class="content">
-    <!-- Dalam main-box -->
-    <div class="main-box">
-      <!-- Konten utama di sini -->
-  
-      <!-- Box Informasi -->
-      <div class="profile-box">
-        <h5 class="profile-title">Informasi Koperasi</h5>
-        <div class="border-gray"></div>
+        <div class="container mt-5">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="dashboard-title">
+                    <strong>Manajemen Koperasi / Admin Koperasi</strong>
+                </div>
+            </div>
         
-        <!-- Logo Box -->
-        <div class="logo-box">
-          <img src="/img/gambar_koperasi.png" alt="Profile Image">
-        </div>
+            <!-- Dalam main-box -->
+            <div class="main-box">
+                <!-- Konten utama di sini -->
+    
+                <!-- Box Informasi -->
+                <div class="profile-box">
+                    <h5 class="profile-title">Informasi Koperasi</h5>
+                <div class="border-gray"></div>
+            
+            <!-- Logo Box -->
+                <div class="logo-box">
+                    <img src="/img/gambar_koperasi.png" alt="Profile Image">
+                </div>
 
-        <div class="table-row">
-          <div class="table-col">
-            <label for="adminName">Nama lengkap admin:</label>
-            <div id="adminName">John Doe</div>
-          </div>
-          <div class="table-col">
-            <label for="coopName">Nama koperasi:</label>
-            <div id="coopName">Koperasi ABC</div>
-          </div>
-        </div>
-        <div class="table-row">
-          <div class="table-col">
-            <label for="legalNumber">No Badan Hukum:</label>
-            <div id="legalNumber">123456789</div>
-          </div>
-          <div class="table-col">
-            <label for="legalDate">Tanggal Badan Hukum:</label>
-            <div id="legalDate">2022-02-02</div>
-          </div>
-        </div>
-        <div class="table-row">
-          <div class="table-col full-width">
-            <label for="address">Alamat:</label>
-            <div id="address">Alamat 1</div>
-          </div>
-        </div>
-        <div class="table-row">
-          <div class="table-col">
-            <label for="district">Kecamatan:</label>
-            <div id="district">Kecamatan A</div>
-          </div>
-          <div class="table-col">
-            <label for="city">Kabupaten/Kota:</label>
-            <div id="city">Kota B</div>
-          </div>
-        </div>
+                <div class="table-row">
+                    <div class="table-col">
+                        <label for="adminName">Nama lengkap admin:</label>
+                        <div id="adminName">John Doe</div>
+                    </div>
 
-        <!-- Setelah diubah -->
-<div class="table-row">
-    <div class="table-col">
-      <label for="subdistrict">Kelurahan:</label>
-      <div id="subdistrict">Nama Kelurahan</div>
+                    <div class="table-col">
+                        <label for="coopName">Nama koperasi:</label>
+                        <div id="coopName">Koperasi ABC</div>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-col">
+                        <label for="legalNumber">No Badan Hukum:</label>
+                        <div id="legalNumber">123456789</div>
+                    </div>
+
+                    <div class="table-col">
+                        <label for="legalDate">Tanggal Badan Hukum:</label>
+                        <div id="legalDate">2022-02-02</div>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-col full-width">
+                        <label for="address">Alamat:</label>
+                        <div id="address">Alamat 1</div>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-col">
+                        <label for="district">Kecamatan:</label>
+                        <div id="district">Kecamatan A</div>
+                    </div>
+
+                    <div class="table-col">
+                        <label for="city">Kabupaten/Kota:</label>
+                        <div id="city">Kota B</div>
+                    </div>
+                </div>
+
+                <!-- Setelah diubah -->
+                <div class="table-row">
+                    <div class="table-col">
+                        <label for="subdistrict">Kelurahan:</label>
+                        <div id="subdistrict">Nama Kelurahan</div>
+                    </div>
+                    <div class="table-col">
+                        <label for="phoneNumber">No Telp:</label>
+                        <div id="phoneNumber">08123456789</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="table-col">
-      <label for="phoneNumber">No Telp:</label>
-      <div id="phoneNumber">08123456789</div>
-    </div>
-  </div>
-      </div>
-    </div>
-  </div>
 
   <!-- jQuery and Bootstrap JS (jika menggunakan Bootstrap) -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

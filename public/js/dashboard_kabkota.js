@@ -18,3 +18,14 @@ function changeContent(view) {
         // Logika lain jika diperlukan
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var cards = document.querySelectorAll('.card');
+
+    cards.forEach(function(card) {
+        card.addEventListener('click', function() {
+            var routeName = this.getAttribute('data-route-name');
+            window.location.href = routeName;
+        });
+    });
+});

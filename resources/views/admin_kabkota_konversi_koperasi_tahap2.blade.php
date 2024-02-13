@@ -12,11 +12,11 @@
 </head>
 
 <body>
-  @include('layouts.admin_provinsi_sidebar')
-  @include('layouts.admin_provinsi_navbar')
+  @include('layouts.admin_kabkota_sidebar')
+  @include('layouts.admin_kabkota_navbar')
 
     <script src="{{asset('js/script.js')}}"></script>
-    <script src="{{asset('js/konversi_tahap2.js')}}"></script>
+    <script src="{{asset('js/adminkabkota_konversi_tahap2.js')}}"></script>
 
     <div class="content">
         <div class="container mt-5">

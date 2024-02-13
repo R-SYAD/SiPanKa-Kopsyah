@@ -62,3 +62,36 @@ function handleOtherClicks(event) {
     // Logika penanganan event lainnya
     event.stopPropagation(); // Mencegah event klik menyebar
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var savedSidebarStatus = localStorage.getItem("sidebarStatus");
+    var sidebar = document.getElementById("sidebar");
+    var navbar = document.getElementById("mainNavbar");
+
+    if (savedSidebarStatus === "collapsed") {
+        sidebar.classList.add("collapsed");
+        navbar.classList.add("navbar-shifted");
+        document.body.classList.add("body-shifted");
+        navbar.classList.add("black");
+        var sidebarHeader = document.querySelector(".sidebar-header");
+        sidebarHeader.classList.add("collapsed");
+    }
+});
+
+
+window.addEventListener('popstate', function(event) {
+    // Tambahkan logika yang diperlukan, seperti mengecek URL dan menjalankan script sesuai
+    console.log('URL changed:', window.location.href);
+});
+
+window.addEventListener('load', function() {
+    var savedSidebarStatus = localStorage.getItem("sidebarStatus");
+    var sidebar = document.getElementById("sidebar");
+    var navbar = document.getElementById("mainNavbar");
+
+    if (savedSidebarStatus === "collapsed") {
+        sidebar.classList.add("collapsed");
+        var sidebarHeader = document.querySelector(".sidebar-header");
+        sidebarHeader.classList.add("collapsed");
+    }
+});

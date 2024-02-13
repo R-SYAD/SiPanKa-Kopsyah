@@ -44,9 +44,12 @@
                   <!-- Grid System: Back Button -->
                   <div class="row">
                     <div class="col-12 text-left ml-0">
-                        <a href="/konversi-koperasi" id="btnKembali" class="btn btn-primary">Kembali</a>
-                      </div>
+                        <a href="/dps-konversi-koperasi" class="kembali" id="btnKembali">
+                            <img src="/img/Back.png" alt="back">
+                            Kembali
+                        </a>
                     </div>
+                  </div>
                 </div>
               </div>
             </div>

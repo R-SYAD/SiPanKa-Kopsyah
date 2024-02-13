@@ -16,6 +16,7 @@
         align-items: center;
         background-color: #28A745;
         font-family: 'Poppins', sans-serif;
+        font-weight: bold;
         color: #f4f4f4;
         padding: 10px;
         z-index: 2;
@@ -155,7 +156,6 @@
     .sidebar.collapsed #toggleSidebar {
         margin-right: 5px; 
     }
-
 
     .content {
         padding: 20px;
