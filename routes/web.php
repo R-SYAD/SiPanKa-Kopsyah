@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\AdminProvinsiLoginController;
 use App\Http\Controllers\AdminProvinsiController;
 use App\Http\Controllers\AdminProvinsiManajemenKabKota;
 use App\Http\Controllers\DpsController;
+use App\Http\Controllers\KoperasiController;
 
 Route::get('/admin_provinsi_dashboard', function () {
     return view('admin_provinsi_dashboard');
@@ -134,3 +135,32 @@ Route::view('/dps-konversi-tahap3', 'dps_konversi_koperasi_tahap3')->name('dps_k
 Route::view('/dps-konversi-tahap4', 'dps_konversi_koperasi_tahap4')->name('dps_konversi_tahap4');
 
 Route::view('/dps-update-profil', 'dps_update_profil')->name('dps_update_profil');
+
+Route::get('/koperasi_lengkapi_profil', function () {
+    return view('koperasi_lengkapi_profil');
+});
+
+Route::get('/koperasi_dashboard', function () {
+    return view('koperasi_dashboard');
+});
+
+Route::get('/koperasi/dashboard', [KoperasiController::class, 'showDashboard'])
+    ->name('dashboardKoperasi');
+
+Route::view('/hasil-pengawasan', 'koperasi_hasil_pengawasan')->name('hasil_pengawasan_koperasi');
+
+Route::view('/hasil-pengawasan2', 'koperasi_hasil_pengawasan2')->name('hasil_pengawasan2_koperasi');
+
+Route::view('/pemilihan-dps', 'koperasi_pemilihan_dps')->name('pemilihan_dps_koperasi');
+
+Route::view('/proses-konversi1', 'koperasi_proses_konversi')->name('proses_konversi1_koperasi');
+
+Route::view('/proses-konversi2', 'koperasi_proses_konversi2')->name('proses_konversi2_koperasi');
+
+Route::view('/proses-konversi3', 'koperasi_proses_konversi3')->name('proses_konversi3_koperasi');
+
+Route::view('/proses-konversi4', 'koperasi_proses_konversi4')->name('proses_konversi4_koperasi');
+
+Route::view('/koperasi-tabel-konversi', 'koperasi_tabel_konversi')->name('tabel_konversi_koperasi');
+
+Route::view('/koperasi-update-profil', 'koperasi_update_profile')->name('koperasi_update_profil');

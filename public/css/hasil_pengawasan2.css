@@ -1,0 +1,25 @@
+.containermt-5{
+    margin-left: 60px;
+    margin-top: 20px;
+}
+h4 {
+font-size: 20px !important; /* Gunakan !important untuk memastikan prioritas tertinggi */
+}
+
+.dashboard-title {
+font-size: 18px; /* Sesuaikan ukuran font pada judul */
+margin-top: 0;
+margin-bottom: 20px; /* Sesuaikan margin bottom pada judul */
+}
+/* Tambahkan gaya CSS di sini */
+
+.dashboard-subtitle strong {
+  font-weight: bold; /* Membuat teks dalam tag strong menjadi bold */
+  font-size: px;
+}
+
+.dashboard-box h2 {
+  font-size: 18px;
+  color: #07170b; /* Warna teks judul box */
+  margin-bottom: 10px;
+}
