@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\File;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminProvinsiController;
 use App\Http\Controllers\AdminKabupatenKotaController;
+use App\Http\Controllers\AdminKoperasiController;
 use App\Http\Controllers\AdminProvinsiManajemenKabKotaController;
 use App\Http\Controllers\AdminProvinsiManajemenDpsController;
 use App\Http\Controllers\AdminProvinsiManajemenKoperasiController;
@@ -108,54 +109,97 @@ Route::middleware(['auth:koperasi'])->group(function () {
         ->name('koperasi.dashboard');
 });
 
-
-
-// Route sementara (opsional, bisa dihapus jika tidak digunakan)
-Route::get('/admin-dps', function () {
-    return view('admin_provinsi_admindps');
-})->name('admindps');
-
-// Route sementara (opsional, bisa dihapus jika tidak digunakan)
-Route::get('/pengawasan-dps', function () {
-    return view('admin_provinsi_pengawasandps');
-})->name('pengawasandps');
-
-// Route sementara (opsional, bisa dihapus jika tidak digunakan)
-Route::get('/konversi-koperasi', function () {
-    return view('admin_provinsi_konversiKoperasi');
-})->name('konversikoperasi');
-
-// Route sementara untuk kabkota (opsional, bisa dihapus jika tidak digunakan)
-Route::get('/konversi-koperasikabkota', function () {
-    return view('admin_kabkota_konversikoperasi');
-})->name('konversikoperasikabkota');
-
-Route::get('/adminkabkota-konversi-tahap1', function () {
-    return view('admin_kabkota_konversi_koperasi_tahap1');
-})->name('tahap1_konversikoperasikabkota');
-
-Route::get('/adminkabkota-konversi-tahap2', function () {
-    return view('admin_kabkota_konversi_koperasi_tahap2');
-})->name('tahap2_konversikoperasikabkota');
-
-Route::get('/adminkabkota-konversi-tahap3', function () {
-    return view('admin_kabkota_konversi_koperasi_tahap3');
-})->name('tahap3_konversikoperasikabkota');
-
-Route::get('/adminkabkota-konversi-tahap4', function () {
-    return view('admin_kabkota_konversi_koperasi_tahap4');
-})->name('tahap4_konversikoperasikabkota');
-
-
-
 // Route untuk halaman detail pengawasan DPS
 Route::view('/detail-dps', 'detail_pengawasan_dps')
     ->name('detail_pengawasan_dps');
 
+// Route untuk halaman dps yaa
+Route::get('/dps-pengawasandps', function () {
+    return view('dps_riwayat_pengawasan');
+})->name('dps_riwayat_pengawasan');
 
+Route::get('/dps-informasikoperasi', function () {
+    return view('dps_informasi_koperasi');
+})->name('dps_informasi_koperasi');
 
+Route::get('/dps-konversikoperasi', function () {
+    return view('dps_konversi_koperasi');
+})->name('dps_konversi_koperasi');
+
+Route::get('/detail-pengawasan-dps', function () {
+    return view('dps_detail_pengawasan');
+})->name('dps_detail_pengawasan');
 
 Route::middleware(['auth:admin_kabupatenkota'])->group(function () {
     // Sesuaikan dengan controller dan metodenya
     Route::get('/admin_kabkota_dashboard', [AdminKabupatenKotaController::class, 'dashboard'])->name('admin_kabupatenkota.dashboard');
 });
+
+Route::get('/kabkota-adminkoperasi', function () {
+    return view('admin_kabkota_adminkoperasi');
+})->name('adminkoperasikabkota');
+
+Route::get('/adminkablota-pengawasan-dps', function () {
+    return view('admin_kabkota_pengawasandps');
+})->name('pengawasandpskabkota');
+
+Route::get('/detail-pengawasan-dps', function () {
+    return view('admin_kabkota_detail_pengawasan_dps');
+})->name('detailpengawasandpskabkota');
+
+Route::get('/detail-kabkotapengawasankoperasi', function () {
+    return view('admin_kabkota_detail_pengawasandps_koperasi');
+})->name('detailpengawasandpskabkota_koperasi');
+
+Route::get('/detail-kabkota-dpsditerima', function () {
+    return view('admin_kabkota_detail_pengawasan_dpsditerima');
+})->name('detailpengawasandpskabkota_diterima');
+
+Route::get('/detail-kabkota-dpsmenunggu', function () {
+    return view('admin_kabkota_detail_pengawasan_dpsmenunggu');
+})->name('detailpengawasandpskabkota_menunggu');
+
+Route::get('/detail-kabkota-dpsditolak', function () {
+    return view('admin_kabkota_detail_pengawasan_dpsditolak');
+})->name('detailpengawasandpskabkota_ditolak');
+
+Route::get('/detail-admin-koperasi-kabkota', function () {
+    return view('admin_kabkota_detailadminkoperasi');
+})->name('admin_kabkota_detailadminkoperasi');
+
+// Route::middleware(['auth:dps'])->group(function () {
+//     // Sesuaikan dengan controller dan metodenya
+//     Route::get('/dps_dashboard', [DpsController::class, 'dashboard'])->name('dps.dashboard');
+// });
+
+Route::get('/detail-admin-koperasi-kabkota', function () {
+    return view('admin_kabkota_detailadminkoperasi');
+})->name('admin_kabkota_detailadminkoperasi');
+
+
+
+Route::middleware(['auth:koperasi'])->group(function () {
+    Route::get('/dashboardKoperasi', [AdminKoperasiController::class, 'dashboard'])->name('dashboard.koperasi');
+    Route::get('/update_profile_koperasi/{id}', [KoperasiController::class, 'update_profile_koperasi'])->name('update_profile_koperasi');
+});
+
+
+Route::get('/dashboard_koperasi', function () {
+    return view('koperasi_dashboard');
+})->name('koperasi.dashboard');
+
+Route::get('/koperasi-pemilihan-dps', function () {
+    return view('koperasi_pemilihan_dps');
+})->name('pemilihan.dps');
+
+Route::get('/koperasi-proses-konversi', function () {
+    return view('koperasi_proses_konversi');
+})->name('proses.konversi.koperasi');
+
+Route::get('/koperasi-hasil-pengawasan', function () {
+    return view('koperasi_hasil_pengawasan');
+})->name('hasil.pengawasan.koperasi');
+
+Route::get('/koperasi-hasil-pengawasan2', function () {
+    return view('koperasi_hasil_pengawasan2');
+})->name('hasil.pengawasan.koperasi2');

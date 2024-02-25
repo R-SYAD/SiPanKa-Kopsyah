@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/navbarsidebar_dps.css') }}">
   <link rel="stylesheet" href="{{ asset('css/konversikoperasi.css') }}">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
@@ -11,17 +11,17 @@
 </head>
 
 <body>
-  @include('layouts.admin_provinsi_sidebar')
-  @include('layouts.admin_provinsi_navbar')
+    @include('layouts.dps_sidebar')
+    @include('layouts.dps_navbar')
 
-  <script src="{{asset('js/script.js')}}"></script>
-  <script src="{{asset('js/konversikoperasi.js')}}"></script>
+  <script src="{{asset('js/script_dps.js')}}"></script>
+  <script src="{{asset('js/dps_konversikoperasi.js')}}"></script>
 
   <div class="content">
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center">
           <div class="dashboard-title">
-            <strong> Manajemen Koperasi /Konversi Koperasi</strong>
+            <strong> Manajemen Koperasi / Konversi Koperasi</strong>
           </div>
           
         </div>
@@ -33,7 +33,6 @@
                     <tr>
                         <th scope="col">No</th>
                         <th scope="col">Koperasi</th>
-                        <th scope="col">Nama DPS</th>
                         <th scope="col">Proses 1</th>
                         <th scope="col">Proses 2</th>
                         <th scope="col">Proses 3</th>
@@ -43,11 +42,9 @@
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td>Koperasi Aku <br></td>
-                    <td>Ghina<br></td>
+                    <td>Koperasi Aku Nich<br></td>
                     <td>
-                      <button class="btn btn-success" onclick="window.location.href='/konversi-tahap1'">Sudah</button>
-
+                      <button class="btn btn-success" onclick="redirectToNextPage(1)">Sudah</button>
                     </td>
                     <td>
                       <button class="btn btn-success" onclick="redirectToNextPage(2)">Sudah</button>
@@ -62,8 +59,8 @@
 
                   <tr>
                       <th scope="row">2</th>
-                      <td>Koperasi Aku <br>
-                        <td>Fitri<br>
+                      <td>Koperasi Aku Nich<br>
+
                         <td><button class="btn btn-danger" onclick="setAsNotDone(1)">Belum</button></td>
                         <td><button class="btn btn-danger" onclick="setAsNotDone(2)">Belum</button></td>
                         <td><button class="btn btn-danger" onclick="setAsNotDone(3)">Belum</button></td>
