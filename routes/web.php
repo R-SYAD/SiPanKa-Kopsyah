@@ -158,6 +158,13 @@ Route::view('/detail-dps', 'detail_pengawasan_dps')
         return view('dps_detail_pengawasan');
     })->name('dps_detail_pengawasan');
 
+    Route::get('/ddpsss', function () {
+        return view('dps_detail_pengawasan');
+    })->name('dps_pengawasan_dps');
+
+    Route::get('/ddpssas', function () {
+        return view('dps_detail_pengawasan_menunggu');
+    })->name('dps_pengawasan_dps');
 Route::middleware(['auth:admin_kabupatenkota'])->group(function () {
     // Sesuaikan dengan controller dan metodenya
     Route::get('/admin_kabkota_dashboard', [AdminKabupatenKotaController::class, 'dashboard'])->name('admin_kabupatenkota.dashboard');
@@ -235,9 +242,12 @@ Route::middleware(['auth:koperasi'])->group(function () {
 
     //Route untuk koperasi proses konversi
 
+  
     Route::get('/pdf/show/{id}', [ProsesKonversiController::class, 'showPdf'])->name('pdf.show');
     Route::get('/proses-konversi/tahap-1', [ProsesKonversiController::class, 'showFormTahap1'])->name('prosesTahap1');
+    
 Route::post('/proses-konversi/tahap-1', [ProsesKonversiController::class, 'prosesTahap1'])->name('prosesTahap1Submit');
+
 Route::get('/proses-konversi/tahap-2', [ProsesKonversiController::class, 'showFormTahap2'])->name('prosesTahap2');
 Route::post('/proses-konversi/tahap-2', [ProsesKonversiController::class, 'prosesTahap2'])->name('prosesTahap2Submit');
 Route::put('/proses-konversi/tahap-3', [ProsesKonversiController::class, 'prosesTahap3'])->name('prosesTahap3Update');

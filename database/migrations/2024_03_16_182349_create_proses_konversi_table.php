@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
         Schema::create('proses_konversi', function (Blueprint $table) {
@@ -32,3 +35,4 @@ return new class extends Migration
         Schema::dropIfExists('proses_konversi');
     }
 };
+

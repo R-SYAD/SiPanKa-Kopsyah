@@ -53,8 +53,7 @@ class AuthController extends Controller
                 case 'koperasi':
                     return redirect()->route('dashboard.koperasi');
                     break;
-    
-
+                    
             case 'dps':
                 return redirect()->route('dps.dashboard');
                 break;
